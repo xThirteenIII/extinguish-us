@@ -18,10 +18,14 @@ div{
     padding: 4px;
 }
 
-.main-container{
+.main-container,
+.info-container,
+.quote-container,
+.subscribe-container{
     display: flex;
     flex-direction: column;
 }
+
 
 .main-container .header-container{
     display: flex;
@@ -33,4 +37,28 @@ div{
     display: flex;
     border: 1px solid blue;
     flex: 2;
+}
+
+.info-container .random-info-container{
+    border: 1px solid blueviolet;
+    flex: 1;
+
+}
+
+.info-container .img-container{
+    border: 1px solid blueviolet;
+    flex: 2;
+
+}
+.quote-container .sentence-container{
+    border: 1px solid black;
+    flex: 2;
+}
+
+.quote-container .origin-container{
+    border: 1px solid black;
+    flex:1;
+}
+.subscribe-container .signup-container{
+    border:1px solid green;
 }
