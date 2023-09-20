@@ -29,6 +29,7 @@ div{
 
 .main-container .header-container{
     display: flex;
+    flex-direction: row;
     border: 1px solid blue;
     flex:1;
 }
@@ -61,4 +62,12 @@ div{
 }
 .subscribe-container .signup-container{
     border:1px solid green;
+}
+
+.header-logo{
+    border: 1px solid orange;
+}
+
+.header-links{
+    border: 1px solid orange;
 }
