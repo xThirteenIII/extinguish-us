@@ -15,4 +15,22 @@ div{
 
 .page-container div{
     flex-grow: 1;
+    padding: 4px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .header-container{
+    display: flex;
+    border: 1px solid blue;
+    flex:1;
+}
+
+.main-container .description-container{
+    display: flex;
+    border: 1px solid blue;
+    flex: 2;
 }
