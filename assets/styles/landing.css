@@ -67,11 +67,16 @@ div{
 }
 
 .header-logo{
+    display: flex;
     border: 1px solid orange;
+    align-items: flex-start;
 }
 
 .header-links{
+    display: flex;
     border: 1px solid orange;
+    justify-content: space-between;
+
 }
 
 .website-description{
