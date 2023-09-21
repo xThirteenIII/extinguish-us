@@ -76,14 +76,25 @@ img{
     border: 1px solid #3882F6;
 }
 
-.quote-container .sentence-container{
+.quote-container .sentence-container,
+.quote-container .origin-container{
     border: 1px solid black;
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.quote-container .sentence-container{
     flex: 2;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .quote-container .origin-container{
-    border: 1px solid black;
     flex:1;
+    justify-content:flex-end;
+    align-items: flex-start;
+    padding-top: 0;
 }
 .subscribe-container .signup-container{
     border:1px solid green;
