@@ -54,13 +54,22 @@ img{
 
 .info-container .img-container{
     border: 1px solid blueviolet;
-    flex: 2;
+    flex: 4;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .images{
+    border: 1px solid brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-item{
     border: 1px solid #3882F6;
+    border-radius: 8px;
 }
 
 .quote-container .sentence-container{
@@ -86,7 +95,6 @@ img{
     display: flex;
     border: 1px solid orange;
     justify-content: space-between;
-
 }
 
 .website-description{
