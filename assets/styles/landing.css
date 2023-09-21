@@ -1,6 +1,7 @@
 body,html{
     margin: 0;
     padding: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 div{
@@ -11,6 +12,7 @@ div{
 
 img{
     max-width: 100%;
+    border-radius: 8px;
 }
 .page-container{
     display: flex;
@@ -29,6 +31,11 @@ img{
 .subscribe-container{
     display: flex;
     flex-direction: column;
+}
+
+.main-container{
+    background-color: var(--dark-bg);
+    color: white;
 }
 
 
