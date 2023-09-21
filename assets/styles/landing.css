@@ -98,6 +98,9 @@ img{
 }
 .subscribe-container .signup-container{
     border:1px solid green;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .header-logo{
@@ -118,4 +121,17 @@ img{
 
 .website-image{
     border: 1px solid greenyellow;
+}
+
+.subscribe-invite{
+    flex:2;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-button{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
