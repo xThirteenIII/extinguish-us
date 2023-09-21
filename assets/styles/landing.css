@@ -48,14 +48,21 @@ img{
 .info-container .random-info-container{
     border: 1px solid blueviolet;
     flex: 1;
-
+    display: flex;
+    justify-content: center;
 }
 
 .info-container .img-container{
     border: 1px solid blueviolet;
     flex: 2;
-
+    display: flex;
+    justify-content: space-between;
 }
+
+.images{
+    border: 1px solid #3882F6;
+}
+
 .quote-container .sentence-container{
     border: 1px solid black;
     flex: 2;
