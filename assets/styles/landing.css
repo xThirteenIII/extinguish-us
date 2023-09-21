@@ -9,6 +9,9 @@ div{
     padding-right: 128px;
 }
 
+img{
+    max-width: 100%;
+}
 .page-container{
     display: flex;
     flex-direction: column;
@@ -85,5 +88,4 @@ div{
 
 .website-image{
     border: 1px solid greenyellow;
-    max-width: 100%;
 }
