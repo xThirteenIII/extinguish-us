@@ -85,4 +85,5 @@ div{
 
 .website-image{
     border: 1px solid greenyellow;
+    max-width: 100%;
 }
