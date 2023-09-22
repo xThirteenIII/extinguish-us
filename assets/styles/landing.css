@@ -114,16 +114,32 @@ img{
     display: flex;
     border: 1px solid orange;
     align-items: flex-start;
+    color: #F9FAF8;
+    font-size: 24px;
 }
 
 .header-links{
     display: flex;
     border: 1px solid orange;
     justify-content: space-between;
+    font-size: 18px;
+    color: var(--header-link);
 }
 
 .website-description{
     border: 1px solid greenyellow;
+}
+
+
+.website-description h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #F9FAF8;
+}
+
+.website-description p{
+    font-size: 18px;
+    color: var(--header-link);
 }
 
 .website-image{
