@@ -169,3 +169,11 @@ img{
     align-items: center;
     justify-content: center;
 }
+
+button{
+    background-color: var(--cta-blue);
+    color: #F9FAF8;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px 8px 20px;
+}
