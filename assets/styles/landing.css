@@ -72,7 +72,6 @@ img{
     display: flex;
     padding-left: 10rem;
     padding-right: 10rem;
-    overflow: scroll;
 }
 
 .quote-container .sentence-container{
@@ -82,7 +81,6 @@ img{
     color: var(--dark-bg);
     font-size: 36px;
     font-style: italic;
-
 }
 
 .quote-container .origin-container{
