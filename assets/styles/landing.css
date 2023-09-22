@@ -83,6 +83,10 @@ img{
     border: 1px solid #3882F6;
 }
 
+.quote-container{
+    background-color: #E5E7EB;
+}
+
 .quote-container .sentence-container,
 .quote-container .origin-container{
     border: 1px solid black;
@@ -96,6 +100,9 @@ img{
     flex: 2;
     justify-content: center;
     align-items: flex-end;
+    color: var(--dark-bg);
+    font-size: 36px;
+    font-style: italic;
 
 }
 
@@ -104,6 +111,8 @@ img{
     justify-content:flex-end;
     align-items: flex-start;
     padding-top: 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 .subscribe-container .signup-container{
     border:1px solid green;
