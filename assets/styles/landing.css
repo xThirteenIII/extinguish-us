@@ -138,14 +138,13 @@ img{
     background-color: var(--cta-blue);
 }
 
-.subscribe-invite{
+.signup-container .subscribe-invite{
     flex:2;
-    display: flex;
-    justify-content: center;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     color: #F9FAF8;
     font-size: 24px;
+    padding-left: 32px;
 }
 
 .subscribe-button{
