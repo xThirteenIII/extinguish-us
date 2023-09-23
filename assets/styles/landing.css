@@ -64,6 +64,10 @@ img{
     align-items: center;
 }
 
+.images .img-description{
+  flex-grow: 0;
+}
+
 .quote-container{
     background-color: #E5E7EB;
 }
