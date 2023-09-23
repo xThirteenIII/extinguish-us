@@ -164,3 +164,8 @@ button{
     border-radius: 4px;
     padding: 8px 20px 8px 20px;
 }
+
+#your_partner{
+    display: flex;
+    align-items: center;
+}
