@@ -1,6 +1,7 @@
 window.onload = function(){
 
     addPicOfTheDayEvent();
+    addClickOnImagesEvent();
 }
 
 function addPicOfTheDayEvent(){
@@ -17,6 +18,33 @@ function addPicOfTheDayEvent(){
     let picOfTheDayBtn = document.getElementById("picOfTheDay");
     picOfTheDayBtn.addEventListener('click', ()=>{
     
-        window.open('https://apod.nasa.gov/apod/ap'+ todayDate_YYMMDD +'.html');
+        window.open('https://apod.nasa.gov/apod/ap'+ todayDate_YYMMDD +'.html', '_blank');
     })
+}
+
+function addClickOnImagesEvent(){
+
+    let vladimiroDiv = document.getElementById("vladimiro");
+    vladimiroDiv.addEventListener('click', function(){
+
+        window.open('https://en.wikipedia.org/wiki/Vladimir_Putin', '_blank')
+    });
+
+    let yourMomDiv = document.getElementById("yourMom");
+    yourMomDiv.addEventListener('click', function(){
+
+        window.open('https://en.wikipedia.org/wiki/Parent', '_blank')
+    });
+
+    let yourBossDiv = document.getElementById("yourBoss");
+    yourBossDiv.addEventListener('click', function(){
+
+        window.open('https://en.wikipedia.org/wiki/Supervisor', '_blank')
+    });
+
+    let yourPartnerDiv = document.getElementById("yourPartner");
+    yourPartnerDiv.addEventListener('click', function(){
+
+        window.open('https://en.wikipedia.org/wiki/On-again,_off-again_relationship', '_blank')
+    });
 }
