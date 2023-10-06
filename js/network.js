@@ -69,3 +69,5 @@ class FetchRequest{
         }
     }
 }
+
+export {FetchRequest};
