@@ -28,6 +28,44 @@ class FetchRequest{
             if (!response.ok){
                 return response.status
             }
+
+            try {
+                const text = await response.text();
+                if (text != ""){
+                    const data = JSON.parse(text);
+                    return data
+                }else{
+                    return response.status
+                }
+            }catch(err){
+                return err
+            }
+
+            // If the method is POST, DELETE, PUT handles body
+        }else {
+            const response = await fetch(this.url + this.port + this.path, {
+                method: this.method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: "include",
+                body: JSON.stringify(this.body),// body data type must match "Content-Type" header
+            });
+            if (!response.ok){
+                return response.status
+            }
+
+            try {
+                const text = await response.text(); // Parse it as text
+                if (text != ""){
+                    const data = JSON.parse(text);     // Try to parse it as JSON
+                    return data
+                }else {
+                    return response.status
+                }
+            } catch(err) {
+                return err
+            }
         }
     }
 }
