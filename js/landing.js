@@ -4,16 +4,19 @@ window.onload = function(){
     addClickOnImagesEvent();
 }
 
+let date = new Date();
+
+// Adds 0 to the days or months with 1 cipher only
+let currentDay = String(date.getDate()).padStart(2,'0');
+let currentMonth = String(date.getMonth()+1).padStart(2, "0");
+let currentFullYear = String(date.getFullYear());
+let currentYearLastTwoDigits = currentFullYear.substring(2,4);
+
+let todayDate_YYMMDD = currentYearLastTwoDigits + currentMonth + currentDay;
+let todayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + currentDay;
+
 function addPicOfTheDayEvent(){
 
-    let date = new Date();
-
-    // Adds 0 to the days or months with 1 cipher only
-    let currentDay = String(date.getDate()).padStart(2,'0');
-    let currentMonth = String(date.getMonth()+1).padStart(2, "0");
-    let currentYear = String(date.getFullYear()).substring(2,4);
-
-    let todayDate_YYMMDD = currentYear + currentMonth + currentDay;
 
     let picOfTheDayBtn = document.getElementById("picOfTheDay");
     picOfTheDayBtn.addEventListener('click', ()=>{
