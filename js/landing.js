@@ -3,6 +3,7 @@ window.onload = function(){
     addPicOfTheDayEvent();
     addClickOnImagesEvent();
     checkIfHazardous();
+    changeFrameOnClick();
 }
 
 let asteroids = new Object();
@@ -95,4 +96,13 @@ function  asteroidIsHazardous(response){
     }
   }
   console.log(asteroids);
+}
+
+function changeFrameOnClick(){
+
+  let wwd_btn = document.getElementById("wwd_btn");
+  let contentFrame = document.getElementById("contentFrame");
+  wwd_btn.addEventListener('click', ()=>{
+    contentFrame.src = "../website-practice/html/index.html";
+  });
 }
