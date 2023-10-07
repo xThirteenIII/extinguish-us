@@ -23,7 +23,7 @@ class FetchRequest{
                 //but should not be included in CORS preflight requests. Use "omit" to tell the 
                 //browsers to exclude credentials from the request, and ignore any credentials sent 
                 //back in the response (e.g., any Set-Cookie header).
-                credentials: "include",
+                //credentials: "include",
             });
             if (!response.ok){
                 return response.status
