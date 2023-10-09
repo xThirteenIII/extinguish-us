@@ -7,6 +7,11 @@ html, body {
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+h1 {
+  color: azure;
+  font-size: large;
+}
+
 .container{
   position: absolute;
   height: 100%;
