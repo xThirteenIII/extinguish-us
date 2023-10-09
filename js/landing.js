@@ -2,7 +2,7 @@ window.onload = function(){
 
     addPicOfTheDayEvent();
     addClickOnImagesEvent();
-    checkIfHazardous();
+    //checkIfHazardous();
     changeFrameOnClick();
 }
 
