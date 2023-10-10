@@ -1,15 +1,33 @@
+@font-face {
+  font-family: dontPanic;
+  src: url(../fonts/KernelPanicNbp-LyG3.ttf);
+}
 
+@font-face {
+  font-family: edgeOfTheGalaxy;
+  src: url(../fonts/EdgeOfTheGalaxyRegular-OVEa6.otf);
+}
+
+@font-face {
+  font-family: terminess;
+  src: url(../fonts/Terminess_mono_NF.ttf);
+}
+@font-face {
+  font-family: sourceCode;
+  src: url(../fonts/SourceCodePro-Regular.ttf);
+}
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: sourceCode;
 }
 
 h1 {
   color: azure;
   font-size: large;
+  font-weight: lighter;
 }
 
 .container{
