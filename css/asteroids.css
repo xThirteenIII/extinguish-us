@@ -12,10 +12,12 @@
   font-family: terminess;
   src: url(../fonts/Terminess_mono_NF.ttf);
 }
+
 @font-face {
   font-family: sourceCode;
   src: url(../fonts/SourceCodePro-Regular.ttf);
 }
+
 html, body {
     margin: 0;
     padding: 0;
@@ -24,10 +26,15 @@ html, body {
     font-family: sourceCode;
 }
 
-h1 {
+span{
   color: azure;
-  font-size: large;
-  font-weight: lighter;
+  font-size: 32px;
+}
+
+a{
+  color: azure;
+  font-size: 32px;
+  text-decoration: none;
 }
 
 .container{
@@ -39,10 +46,12 @@ h1 {
   overflow: hidden;
   background: var(--dark-bg);
 }
+
 svg{
   position: absolute;
   height: 100%;
 }
+
 .lines {
   opacity: 0.05; 
 }
@@ -61,3 +70,7 @@ svg{
   clip-rule: evenodd;
   fill: #7A6BB5; }
 
+
+.spacer{
+  height: 2rem;
+}
