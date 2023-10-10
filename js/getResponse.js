@@ -60,14 +60,27 @@ function  asteroidIsHazardous(response){
     }
   }
   fillAsteroidInfo();
-}
 
-function fillAsteroidInfo(){
-
+  if (asteroidInfoArray.length > 0){
         let title = document.getElementsByClassName("line");
         for(let i = 0; i < title.length; i++) {
             title[i].textContent = "YeS We DIe";
         }
+  }else{
+        let title = document.getElementsByClassName("line");
+        for(let i = 0; i < title.length; i++) {
+            title[i].textContent = "We Don'T DIe TodAy :(";
+        }
+        return
+  }
+
+  if (asteroidInfoArray.length > 1){
+    spawnNextAndPreviousBtn();
+  }
+}
+
+function fillAsteroidInfo(){
+
 
         let name = document.getElementById("name");
         name.previousElementSibling.textContent = "Asteroid name /// ";
@@ -93,4 +106,27 @@ function fillAsteroidInfo(){
         relative_velocity.previousElementSibling.textContent = "Relative velocity /// ";
         relative_velocity.textContent = parseFloat(asteroidInfoArray[0].close_approach_data[0].relative_velocity.kilometers_per_second).toFixed(4)+" [km/s]";
 
+}
+
+function spawnNextAndPreviousBtn(){
+    
+    let buttons = document.getElementById("buttons");
+    let next_btn = document.createElement("button");
+    let previous_btn = document.createElement("button");
+    next_btn.textContent = "next_threat";
+    next_btn.style = "flex: 0 1 0;"
+    previous_btn.textContent = "previous_threat";
+    previous_btn.style = "flex: 0 1 0;"
+    buttons.appendChild(next_btn);
+    buttons.appendChild(previous_btn);
+
+    addButtonFunctionalities(next_btn, previous_btn);
+}
+
+function addButtonFunctionalities(next_btn, previous_btn){
+
+    next_btn.addEventListener('click', ()=>{
+
+        
+    });
 }
