@@ -3,6 +3,7 @@ window.onload = function(){
 }
 
 let asteroidInfoArray = [];
+let currentAsteroid = 0;
 
 let date = new Date();
 
@@ -59,13 +60,13 @@ function  asteroidIsHazardous(response){
       }
     }
   }
-  fillAsteroidInfo();
 
   if (asteroidInfoArray.length > 0){
         let title = document.getElementsByClassName("line");
         for(let i = 0; i < title.length; i++) {
             title[i].textContent = "YeS We DIe";
         }
+        fillAsteroidInfo();
   }else{
         let title = document.getElementsByClassName("line");
         for(let i = 0; i < title.length; i++) {
@@ -75,58 +76,57 @@ function  asteroidIsHazardous(response){
   }
 
   if (asteroidInfoArray.length > 1){
-    spawnNextAndPreviousBtn();
+    addButtonFunctionalities();
   }
 }
 
 function fillAsteroidInfo(){
 
-
         let name = document.getElementById("name");
         name.previousElementSibling.textContent = "Asteroid name /// ";
-        name.textContent =asteroidInfoArray[0].name;
+        name.textContent =asteroidInfoArray[currentAsteroid].name;
 
         let id = document.getElementById("id");
         id.previousElementSibling.textContent = "Id /// ";
-        id.textContent = asteroidInfoArray[0].id;
+        id.textContent = asteroidInfoArray[currentAsteroid].id;
 
         let distance_from_earth = document.getElementById("distance_from_earth");
         distance_from_earth.previousElementSibling.textContent = "Distance from Earth /// ";
-        distance_from_earth.textContent = parseFloat(asteroidInfoArray[0].close_approach_data[0].miss_distance.astronomical).toFixed(4)+" [au]";
+        distance_from_earth.textContent = parseFloat(asteroidInfoArray[currentAsteroid].close_approach_data[0].miss_distance.astronomical).toFixed(4)+" [au]";
 
         let estimated_diameter = document.getElementById("diameter");
         estimated_diameter.previousElementSibling.textContent = "Estimated max diameter /// ";
-        estimated_diameter.textContent = parseFloat(asteroidInfoArray[0].estimated_diameter.kilometers.estimated_diameter_max).toFixed(4)+" [km]";
+        estimated_diameter.textContent = parseFloat(asteroidInfoArray[currentAsteroid].estimated_diameter.kilometers.estimated_diameter_max).toFixed(4)+" [km]";
 
         let orbiting_body = document.getElementById("orbiting_body");
         orbiting_body.previousElementSibling.textContent = "Orbiting body /// ";
-        orbiting_body.textContent = asteroidInfoArray[0].close_approach_data[0].orbiting_body;
+        orbiting_body.textContent = asteroidInfoArray[currentAsteroid].close_approach_data[0].orbiting_body;
 
         let relative_velocity = document.getElementById("relative_velocity");
         relative_velocity.previousElementSibling.textContent = "Relative velocity /// ";
-        relative_velocity.textContent = parseFloat(asteroidInfoArray[0].close_approach_data[0].relative_velocity.kilometers_per_second).toFixed(4)+" [km/s]";
+        relative_velocity.textContent = parseFloat(asteroidInfoArray[currentAsteroid].close_approach_data[0].relative_velocity.kilometers_per_second).toFixed(4)+" [km/s]";
 
 }
 
-function spawnNextAndPreviousBtn(){
-    
-    let buttons = document.getElementById("buttons");
-    let next_btn = document.createElement("button");
-    let previous_btn = document.createElement("button");
-    next_btn.textContent = "next_threat";
-    next_btn.style = "flex: 0 1 0;"
-    previous_btn.textContent = "previous_threat";
-    previous_btn.style = "flex: 0 1 0;"
-    buttons.appendChild(next_btn);
-    buttons.appendChild(previous_btn);
-
-    addButtonFunctionalities(next_btn, previous_btn);
-}
-
-function addButtonFunctionalities(next_btn, previous_btn){
+function addButtonFunctionalities(){
+    let next_btn = document.getElementById("next_btn");
+    let previous_btn = document.getElementById("previous_btn");
 
     next_btn.addEventListener('click', ()=>{
+        currentAsteroid+=1;
+        if (currentAsteroid < asteroidInfoArray.length){
+            fillAsteroidInfo();
+        }else{
+            currentAsteroid -=1;
+        }
+    });
 
-        
+    previous_btn.addEventListener('click', ()=>{
+        currentAsteroid-=1;
+        if (currentAsteroid >= 0){
+            fillAsteroidInfo();
+        }else{
+            currentAsteroid += 1;
+        }
     });
 }
