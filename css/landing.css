@@ -7,7 +7,11 @@ body,html{
 img{
     max-width: 100%;
     border-radius: 8px;
+}
 
+a{
+    text-decoration: none;
+    color: var(--header-link);
 }
 
 iframe{
@@ -145,7 +149,7 @@ iframe{
 
 .subscribe-button,
 .subscribe-invite{
-    background-color: var(--cta-blue);
+    background-color: var(--dark-violet);
 }
 
 .signup-container .subscribe-invite{
@@ -167,7 +171,7 @@ iframe{
 }
 
 button{
-    background-color: var(--cta-blue);
+    background-color: var(--dark-violet);
     color: #F9FAF8;
     border: none;
     border-radius: 4px;
@@ -175,6 +179,11 @@ button{
 }
 
 #yourPartner{
+    display: flex;
+    align-items: center;
+}
+
+.asteroid_icon_container{
     display: flex;
     align-items: center;
 }
