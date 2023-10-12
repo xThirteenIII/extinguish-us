@@ -32,7 +32,6 @@ function checkIfHazardous(){
 }
 
 function  asteroidIsHazardous(response){
-  console.log(response);
 
   let hazardousCount = 0;
 
