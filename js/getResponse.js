@@ -19,8 +19,8 @@ let todayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + currentD
 let yesterdayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + previousDay;
 
 let api_key =  "Tx8dZAeM50keheK1spm3qEZiA8EPhXahNI98M5xG"
-//let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date="+yesterdayDate_YYYY_MM_DD+"&end_date="+todayDate_YYYY_MM_DD+"&api_key="+api_key;
-let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-10-07&end_date=2023-10-08&api_key="+api_key;
+let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date="+yesterdayDate_YYYY_MM_DD+"&end_date="+todayDate_YYYY_MM_DD+"&api_key="+api_key;
+//let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-10-07&end_date=2023-10-08&api_key="+api_key;
 
 function checkIfHazardous(){
   
@@ -38,7 +38,8 @@ function  asteroidIsHazardous(response){
   for (const [key, value] of Object.entries(response)){
     if (key == "near_earth_objects"){
       for (const [key2, value2] of Object.entries(value)){
-        if (key2 == "2023-10-07"){
+        //if (key2 == "2023-10-07"){
+        if (key2 == todayDate_YYYY_MM_DD){
           value2.forEach(asteroid => {
             for (const [key3, value3] of Object.entries(asteroid)){
               if (key3 == "is_potentially_hazardous_asteroid" && value3 == true){
