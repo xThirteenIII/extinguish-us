@@ -89,6 +89,10 @@ iframe{
   flex-grow: 0;
 }
 
+.img-item{
+  cursor: pointer;
+}
+
 .quote-container{
     background-color: #E5E7EB;
 }
@@ -189,4 +193,8 @@ button{
 .asteroid_icon_container{
     display: flex;
     align-items: center;
+}
+
+#picOfTheDay{
+  cursor: pointer;
 }
