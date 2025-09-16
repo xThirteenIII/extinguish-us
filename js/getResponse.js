@@ -22,8 +22,10 @@ let yesterdayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + prev
 // This shouldn't be here for security reason, but lazy :D
 // Any one can get one so it's ok
 let api_key =  "XicMoOutjDW1JCb6yNbcnUPLpz2Q5kG2Sc41rAKe"
-let asteroid_url = "https://cors-anywhere.herokuapp.com/https://api.nasa.gov/neo/rest/v1/feed?start_date="+yesterdayDate_YYYY_MM_DD+"&end_date="+todayDate_YYYY_MM_DD+"&api_key="+api_key;
-//let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-10-07&end_date=2023-10-08&api_key="+api_key;
+
+// cors-anywhere lets the request go OK by adding CORS header, since nasa server does not respond with it.
+//let asteroid_url = "https://cors-anywhere.herokuapp.com/https://api.nasa.gov/neo/rest/v1/feed?start_date="+yesterdayDate_YYYY_MM_DD+"&end_date="+todayDate_YYYY_MM_DD+"&api_key="+api_key;
+let asteroid_url = "https://cors-anywhere.herokuapp.com/https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-10-07&end_date=2023-10-08&api_key="+api_key;
 
 function checkIfHazardous(){
   
