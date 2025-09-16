@@ -18,7 +18,10 @@ let todayDate_YYMMDD = currentYearLastTwoDigits + currentMonth + currentDay;
 let todayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + currentDay;
 let yesterdayDate_YYYY_MM_DD = currentFullYear + "-" + currentMonth + "-" + previousDay;
 
-let api_key =  "2ZFnOzm474hbsRfzrHVra6GBKbHjbFdGe5F1ZyP7"
+// Request a new api key each month
+// This shouldn't be here for security reason, but lazy :D
+// Any one can get one so it's ok
+let api_key =  "XicMoOutjDW1JCb6yNbcnUPLpz2Q5kG2Sc41rAKe"
 let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date="+yesterdayDate_YYYY_MM_DD+"&end_date="+todayDate_YYYY_MM_DD+"&api_key="+api_key;
 //let asteroid_url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-10-07&end_date=2023-10-08&api_key="+api_key;
 
